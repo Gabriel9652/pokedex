@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pokedex.api.pokemonRepository
 import com.example.pokedex.domain.Pokemon
 import com.example.pokedex.domain.pokemonsType
 import com.example.pokedex.view.pokeAdapter
@@ -23,6 +24,9 @@ class MainActivity : AppCompatActivity() {
             "Bulbasaur",
             listOf(pokemonsType("Grass"))
         )
+
+        val pokemosApi = pokemonRepository.listPokemons()
+
         val pokemons = listOf(
             bulbasaur,bulbasaur,bulbasaur,bulbasaur
         )
